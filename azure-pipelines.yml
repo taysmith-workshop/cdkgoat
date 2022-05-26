@@ -34,7 +34,7 @@ stages:
             script: |
               pip install -r requirements.txt
               cdk synth
-              checkov -f cdk.out/cdkgoat.template.json -o junitxml > Checkov-Report.xml'
+              checkov -f cdk.out/cdkgoat.template.json -o junitxml > Checkov-Report.xml
           continueOnError: true
           displayName: Checkov scan
         - task: PublishTestResults@2
